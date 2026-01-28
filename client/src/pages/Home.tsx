@@ -127,7 +127,7 @@ export default function Home() {
               className="aspect-[3/4] overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all duration-1000 border-8 border-white shadow-2xl"
             >
               <img 
-                src="/attached_assets/Untitled_design_1769619966116.png" 
+                src="/attached_assets/Untitled_design_1769620114292.png" 
                 alt="Manish Dabkara" 
                 className="w-full h-full object-cover"
               />
