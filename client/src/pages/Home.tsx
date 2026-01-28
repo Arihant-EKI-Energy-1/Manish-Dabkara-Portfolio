@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Leaf, 
-  Globe, 
-  Award, 
-  TrendingUp, 
+  ArrowRight, 
   Linkedin, 
   Mail, 
   ExternalLink,
-  ChevronRight,
-  MapPin,
-  Calendar,
+  ChevronDown,
+  Globe,
+  Award,
   Zap,
-  Building
+  Building,
+  User,
+  History,
+  Contact
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -21,229 +21,258 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Home() {
   const experiences = [
     {
-      company: "EKI RED - EnKing International Real Estate & Developers",
-      role: "Managing Director",
-      period: "Jan 2026 - Present",
-      description: "Redefining Indore’s growth with sustainable design and refined luxury. Strategic land aggregation for renewable energy projects nationwide."
-    },
-    {
       company: "EKI Energy Services Ltd (EnKing International)",
       role: "Chairman & MD",
-      period: "Aug 2008 - Present",
-      description: "Leading developer and supplier of carbon credits globally. Reached Unicorn status ($1B+ valuation) in Jan 2022. Served 3,500+ clients across 40+ countries."
+      period: "2008 - Present",
+      location: "Indore, India",
+      details: [
+        "Global Carbon Markets Leader - reached Unicorn status ($1B+ valuation) in Jan 2022.",
+        "First carbon credit company in India to cross this milestone.",
+        "Served 3,500+ clients across 40+ countries.",
+        "Mobilized 200+ million offsets."
+      ]
+    },
+    {
+      company: "EKI RED - Real Estate & Developers",
+      role: "Managing Director",
+      period: "2026 - Present",
+      details: [
+        "Redefining Indore’s growth with sustainable design and refined luxury.",
+        "Strategic land aggregation for renewable energy projects nationwide (500 GW goal)."
+      ]
     },
     {
       company: "Carbon Markets Association of India",
       role: "President",
-      period: "Oct 2022 - Present",
-      description: "Empowering India's growth to Net Zero by 2070. Supporting government and industry on domestic ETS, Article 6, and Voluntary Carbon Markets."
+      period: "2022 - Present",
+      details: [
+        "Helping Industries in ref. to domestic ETS, Art 6.2, Art 6.4, CBAM, and Carbon Neutrality.",
+        "Empowered growth to net zero journey by 2070."
+      ]
+    },
+    {
+      company: "CII National Committee on Bioenergy",
+      role: "Chair of Subgroup on Regulatory Carbon Credit",
+      period: "2024 - Present",
+      details: [
+        "Working towards India's commitment to decarbonisation and just energy transition."
+      ]
+    },
+    {
+      company: "Amrut Nature Solutions (JV with Shell)",
+      role: "Chairman of the Board",
+      period: "2022 - Present",
+      details: [
+        "Focusing on conservation, enhancement and restoration of natural ecosystems.",
+        "Investment into forests, agriculture, grasslands, and blue carbon."
+      ]
     }
   ];
 
-  const highlights = [
-    { icon: <Globe className="w-6 h-6" />, label: "Unicorn Founder", value: "$1B+ Valuation" },
-    { icon: <Zap className="w-6 h-6" />, label: "Credits Mobilized", value: "200M+ Offsets" },
-    { icon: <Building className="w-6 h-6" />, label: "Global Reach", value: "40+ Countries" },
-    { icon: <Award className="w-6 h-6" />, label: "Recognition", value: "Fortune 40U40" }
+  const education = [
+    { school: "Indian Institute of Management, Ahmedabad", degree: "Executive Education", year: "2018" },
+    { school: "Devi Ahilya Vishwavidyalaya", degree: "Master of Business Administration - MBA", year: "2007" },
+    { school: "Rajiv Gandhi Prodyogiki Vishwavidyalaya", degree: "Bachelor of Engineering - BE, Electrical", year: "2005" }
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 glass border-b border-primary/5 px-6 py-4 flex justify-between items-center">
-        <span className="font-serif text-xl font-bold text-primary tracking-tight">MANISH DABKARA</span>
-        <div className="flex gap-8 text-sm font-medium">
-          <a href="#about" className="hover:text-primary transition-colors">About</a>
-          <a href="#experience" className="hover:text-primary transition-colors">Experience</a>
-          <a href="#leadership" className="hover:text-primary transition-colors">Leadership</a>
-          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
-        </div>
-      </nav>
+    <div className="bg-white text-black font-sans selection:bg-black selection:text-white">
+      {/* Minimal Header */}
+      <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm border-b border-black/5 px-6 py-6 flex justify-between items-center">
+        <span className="font-serif text-2xl font-bold tracking-tighter">MANISH DABKARA</span>
+        <nav className="hidden md:flex gap-10 text-xs uppercase tracking-[0.2em] font-medium">
+          <a href="#about" className="hover:opacity-50 transition-opacity">About</a>
+          <a href="#experience" className="hover:opacity-50 transition-opacity">Experience</a>
+          <a href="#leadership" className="hover:opacity-50 transition-opacity">Ecosystem</a>
+          <a href="#contact" className="hover:opacity-50 transition-opacity">Contact</a>
+        </nav>
+      </header>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 lg:px-20 overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(45,160,80,0.05),transparent_50%)]">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="flex-1 space-y-8"
-          >
-            <Badge variant="outline" className="px-4 py-1 border-primary/20 text-primary bg-primary/5">
-              Building the Future of Decarbonization
-            </Badge>
-            <h1 className="text-6xl lg:text-8xl font-serif font-bold leading-[0.9] text-primary">
-              Integrity in <br /> <span className="text-foreground/80">Climate Action.</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-xl font-light leading-relaxed">
-              Chairman & MD of EKI Energy Services Ltd. Reached unicorn status by bringing credibility and scale to international environmental commodity markets.
-            </p>
-            <div className="flex gap-4">
-              <Button size="lg" className="rounded-full px-8 bg-primary hover:bg-primary/90 text-primary-foreground group" data-testid="button-contact">
-                Work Together <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="rounded-full px-8" data-testid="button-linkedin">
-                <Linkedin className="mr-2 w-4 h-4" /> Profile
+      {/* Hero Section - Author Style */}
+      <section className="min-h-screen flex flex-col justify-center section-padding pt-32">
+        <div className="max-w-screen-2xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-8 space-y-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-huge">
+                Climate <br />
+                <span className="italic font-normal">Strategist.</span> <br />
+                Unicorn <span className="opacity-30">Founder.</span>
+              </h1>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="max-w-2xl text-xl md:text-2xl leading-relaxed font-light text-black/70"
+            >
+              Building EKI to be a global leader in decarbonization. 
+              Mobilizing 200M+ offsets and serving 3,500+ clients across 40 countries.
+            </motion.div>
+            <div className="flex gap-6">
+              <Button variant="ghost" className="p-0 text-lg group flex items-center gap-4 hover:bg-transparent">
+                <span className="underline underline-offset-8 decoration-1 font-medium">Read the story</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Button>
             </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="flex-1 relative"
-          >
-            <div className="relative z-10 rounded-2xl overflow-hidden aspect-[4/5] bg-muted shadow-2xl">
+          </div>
+          <div className="lg:col-span-4 relative">
+             <motion.div
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2 }}
+              className="aspect-[3/4] overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all duration-1000"
+            >
               <img 
                 src="/attached_assets/Untitled_design_1769619641043.png" 
                 alt="Manish Dabkara" 
-                className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover"
               />
-            </div>
-            {/* Abstract background element */}
-            <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-accent/10 rounded-full blur-3xl" />
-          </motion.div>
-        </div>
-
-        {/* Highlight Grid */}
-        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mt-24">
-          {highlights.map((item, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="p-6 border-l border-primary/10 space-y-3"
-            >
-              <div className="text-primary">{item.icon}</div>
-              <div>
-                <p className="text-sm text-muted-foreground uppercase tracking-wider">{item.label}</p>
-                <p className="text-xl font-serif font-bold text-primary">{item.value}</p>
-              </div>
             </motion.div>
-          ))}
+            <div className="absolute -bottom-6 -left-6 bg-black text-white p-8 hidden md:block">
+              <p className="text-4xl font-serif">Fortune</p>
+              <p className="text-sm uppercase tracking-widest mt-2">40 Under 40</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 lg:px-20 bg-primary/[0.02]">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-primary">Key Initiatives</h2>
-              <p className="text-muted-foreground max-w-md">Driving global decarbonization through listed enterprise leadership and strategic policy advocacy.</p>
+      {/* Summary / About */}
+      <section id="about" className="section-padding bg-black text-white">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
+          <h2 className="text-4xl md:text-6xl font-serif">A path to a <br /> greener future.</h2>
+          <div className="space-y-8 text-xl font-light text-white/70 leading-relaxed">
+            <p>
+              Decarbonization becomes real when claims must survive audit, regulation, and reputational scrutiny—not just quarterly storytelling.
+            </p>
+            <p>
+              I founded EKI (EnKing International) in 2008 and serve as Chairman & MD of EKI Energy Services Ltd, a listed company in India. In January 2022, EKI reached unicorn status with a $1 billion+ valuation—the first carbon credit company in India to cross that milestone.
+            </p>
+            <p>
+              Beyond climate markets, I build operating businesses in GTD training, green fuel manufacturing, and real estate—domains where discipline and repeatable execution decide outcomes.
+            </p>
+            <div className="grid grid-cols-2 gap-12 pt-12">
+              <div>
+                <p className="text-5xl font-serif text-white">17+</p>
+                <p className="text-xs uppercase tracking-widest mt-2">Years Experience</p>
+              </div>
+              <div>
+                <p className="text-5xl font-serif text-white">3.5k+</p>
+                <p className="text-xs uppercase tracking-widest mt-2">Global Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section - Clean Grid */}
+      <section id="experience" className="section-padding">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="flex justify-between items-end mb-24">
+            <h2 className="text-5xl md:text-7xl font-serif">Career <br /> Footprint</h2>
+            <div className="text-right hidden md:block">
+              <p className="text-xs uppercase tracking-widest opacity-40">Timeline</p>
+              <p className="text-sm font-medium mt-2">2008 — 2026</p>
             </div>
           </div>
 
-          <div className="grid gap-6">
+          <div className="divide-y divide-black/10">
             {experiences.map((exp, i) => (
-              <motion.div
+              <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
+                className="py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 group"
               >
-                <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group">
-                  <CardContent className="p-0 flex flex-col md:flex-row">
-                    <div className="w-1 bg-primary/20 group-hover:bg-primary transition-colors" />
-                    <div className="p-8 flex-1">
-                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                        <div>
-                          <h3 className="text-xl font-bold text-primary">{exp.company}</h3>
-                          <p className="text-muted-foreground font-medium">{exp.role}</p>
-                        </div>
-                        <Badge variant="secondary" className="w-fit">{exp.period}</Badge>
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="lg:col-span-3">
+                  <span className="text-sm font-medium opacity-40">{exp.period}</span>
+                </div>
+                <div className="lg:col-span-4">
+                  <h3 className="text-2xl font-serif font-bold group-hover:translate-x-2 transition-transform duration-500">{exp.company}</h3>
+                  <p className="text-sm uppercase tracking-widest mt-2 opacity-60">{exp.role}</p>
+                </div>
+                <div className="lg:col-span-5">
+                  <ul className="space-y-4">
+                    {exp.details.map((detail, j) => (
+                      <li key={j} className="text-lg font-light text-black/60 flex gap-4">
+                        <span className="block w-1 h-1 bg-black mt-3 shrink-0" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Leadership & Ecosystem Section */}
-      <section id="leadership" className="py-24 px-6 lg:px-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-primary">Global Impact Roles</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Shaping international standards and market readiness across industries.</p>
+      {/* Ecosystem Roles */}
+      <section id="leadership" className="section-padding bg-gray-50">
+        <div className="max-w-screen-xl mx-auto">
+          <h2 className="text-center text-4xl font-serif mb-20 underline underline-offset-[20px] decoration-black/10">Global Governance Roles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1px bg-black/5 border border-black/5">
+            {[
+              { title: "IIT Kanpur", role: "Guest Faculty (Industry)" },
+              { title: "SEPC India", role: "Committee Member (Env. Services)" },
+              { title: "IEEMA", role: "National Executive Council" },
+              { title: "ICVCM London", role: "Work Programme Member" },
+              { title: "Carbon Registry-India", role: "Governing Council Member" },
+              { title: "World Utilities Congress", role: "Executive Committee" }
+            ].map((role, i) => (
+              <div key={i} className="bg-white p-12 hover:bg-black hover:text-white transition-colors duration-500">
+                <p className="text-xs uppercase tracking-widest opacity-40 mb-4">Ecosystem</p>
+                <h4 className="text-xl font-serif font-bold mb-2">{role.title}</h4>
+                <p className="text-sm opacity-60">{role.role}</p>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl border border-primary/5 bg-primary/[0.01] hover:bg-primary/[0.03] transition-colors">
-              <TrendingUp className="w-8 h-8 text-primary mb-6" />
-              <h4 className="text-xl font-bold mb-3">CII Subgroup Chair</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">Leading Regulatory Carbon Credit subgroup under National Committee on Bioenergy, supporting India's 2070 Net Zero goal.</p>
+      {/* Education */}
+      <section className="section-padding">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-24">
+            <div className="md:w-1/3">
+              <h2 className="text-4xl font-serif">Academic <br /> Foundation</h2>
             </div>
-            <div className="p-8 rounded-2xl border border-primary/5 bg-primary/[0.01] hover:bg-primary/[0.03] transition-colors">
-              <Globe className="w-8 h-8 text-primary mb-6" />
-              <h4 className="text-xl font-bold mb-3">ICVCM Member</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">Contributing to transparency and standardization through Continuous Improvement Work Programmes in London.</p>
-            </div>
-            <div className="p-8 rounded-2xl border border-primary/5 bg-primary/[0.01] hover:bg-primary/[0.03] transition-colors">
-              <Leaf className="w-8 h-8 text-primary mb-6" />
-              <h4 className="text-xl font-bold mb-3">Amrut Nature Solutions</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">Chairman of the JV between EnKing & Shell, focusing on nature-based solutions and ecosystem restoration.</p>
+            <div className="md:w-2/3 space-y-12">
+              {education.map((edu, i) => (
+                <div key={i} className="border-l-2 border-black pl-8">
+                  <p className="text-sm uppercase tracking-widest opacity-40 mb-2">{edu.year}</p>
+                  <h4 className="text-2xl font-serif font-bold">{edu.school}</h4>
+                  <p className="text-lg font-light text-black/60">{edu.degree}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Awards Footer Grid */}
-      <section className="py-20 border-t border-primary/5 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 opacity-60 grayscale">
-          <div className="flex flex-col items-center text-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-widest">Fortune India</span>
-            <p className="font-serif text-sm">40 Under 40</p>
-          </div>
-          <div className="flex flex-col items-center text-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-widest">TEDx Speaker</span>
-            <p className="font-serif text-sm">Path to a Greener Future</p>
-          </div>
-          <div className="flex flex-col items-center text-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-widest">GTD Trainer</span>
-            <p className="font-serif text-sm">Productivity Expert</p>
-          </div>
-          <div className="flex flex-col items-center text-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-widest">Unicorn Status</span>
-            <p className="font-serif text-sm">1st Carbon Credit Unicorn</p>
+      {/* Contact Section - Final Author Style */}
+      <section id="contact" className="section-padding border-t border-black/5">
+        <div className="max-w-screen-xl mx-auto text-center py-24 space-y-12">
+          <h2 className="text-6xl md:text-9xl font-serif">Get in <span className="italic">Touch.</span></h2>
+          <div className="flex flex-col items-center gap-6">
+            <a href="mailto:manish@enkingint.org" className="text-2xl md:text-4xl font-light hover:opacity-50 transition-opacity underline underline-offset-[12px] decoration-black/20">
+              manish@enkingint.org
+            </a>
+            <div className="flex gap-10 mt-12">
+              <a href="https://linkedin.com/in/manishdabkara" className="text-xs uppercase tracking-[0.2em] font-bold hover:underline">LinkedIn</a>
+              <a href="https://www.enkingint.org" className="text-xs uppercase tracking-[0.2em] font-bold hover:underline">Company</a>
+              <a href="#" className="text-xs uppercase tracking-[0.2em] font-bold hover:underline">TEDx Talk</a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer / Contact */}
-      <footer id="contact" className="py-20 px-6 lg:px-20 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-          <div className="space-y-6 text-center md:text-left">
-            <h2 className="text-5xl lg:text-6xl font-serif font-bold leading-tight">Let's build a <br /> sustainable legacy.</h2>
-            <div className="flex flex-col md:flex-row gap-6">
-              <a href="mailto:manish@enkingint.org" className="flex items-center justify-center md:justify-start gap-2 hover:text-accent transition-colors">
-                <Mail className="w-5 h-5" /> manish@enkingint.org
-              </a>
-              <a href="https://linkedin.com/in/manishdabkara" className="flex items-center justify-center md:justify-start gap-2 hover:text-accent transition-colors">
-                <Linkedin className="w-5 h-5" /> /manishdabkara
-              </a>
-            </div>
-          </div>
-          
-          <div className="text-center md:text-right space-y-4">
-            <p className="text-sm opacity-60">Indore, Madhya Pradesh, India</p>
-            <Button size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 px-10">
-              Get in Touch
-            </Button>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs opacity-40">
-          <p>© 2026 Manish Dabkara. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="https://www.enkingint.org" target="_blank" rel="noreferrer" className="flex items-center gap-1">EKI Energy Services <ExternalLink className="w-3 h-3" /></a>
-          </div>
-        </div>
+      <footer className="py-12 px-6 border-t border-black/5 text-center text-[10px] uppercase tracking-widest opacity-40 font-bold">
+        © 2026 Manish Dabkara — Leading the global decarbonization movement.
       </footer>
     </div>
   );
