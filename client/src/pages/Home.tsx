@@ -14,9 +14,7 @@ import {
   History,
   Contact
 } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import HeroImage from "@assets/Untitled_design_1769620114292.png";
 
 export default function Home() {
   const experiences = [
@@ -127,7 +125,7 @@ export default function Home() {
               className="aspect-[3/4] overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all duration-1000 border-8 border-white shadow-2xl"
             >
               <img 
-                src="/attached_assets/Untitled_design_1769620114292.png" 
+                src={HeroImage} 
                 alt="Manish Dabkara" 
                 className="w-full h-full object-cover"
               />
