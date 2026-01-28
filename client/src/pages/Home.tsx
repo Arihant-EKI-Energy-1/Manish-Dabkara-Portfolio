@@ -124,10 +124,10 @@ export default function Home() {
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2 }}
-              className="aspect-[3/4] overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all duration-1000"
+              className="aspect-[3/4] overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all duration-1000 border-8 border-white shadow-2xl"
             >
               <img 
-                src="/attached_assets/Untitled_design_1769619641043.png" 
+                src="/attached_assets/Untitled_design_1769619966116.png" 
                 alt="Manish Dabkara" 
                 className="w-full h-full object-cover"
               />
