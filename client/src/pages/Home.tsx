@@ -14,6 +14,7 @@ import {
   History,
   Contact
 } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 import HeroImage from "@assets/Untitled_design_1769620114292.png";
 
 export default function Home() {
