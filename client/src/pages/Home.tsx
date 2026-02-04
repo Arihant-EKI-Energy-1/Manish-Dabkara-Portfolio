@@ -18,6 +18,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import HeroImage from "@assets/Untitled_design_1769620114292.png";
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 export default function Home() {
   const experiences = [
     {
@@ -265,6 +267,62 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Awards, Recognition & Events Section */}
+      <section id="recognition" className="section-padding bg-gray-50">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-serif mb-4">Recognition & Impact</h2>
+            <p className="text-muted-foreground uppercase tracking-widest text-xs font-bold">Last 6 Months Highlights</p>
+          </div>
+
+          <Tabs defaultValue="awards" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-12 bg-black/5 p-1 rounded-none h-12">
+              <TabsTrigger value="awards" className="rounded-none data-[state=active]:bg-black data-[state=active]:text-white uppercase tracking-widest text-[10px] font-bold">Awards & Honors</TabsTrigger>
+              <TabsTrigger value="events" className="rounded-none data-[state=active]:bg-black data-[state=active]:text-white uppercase tracking-widest text-[10px] font-bold">Keynote & Speaking</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="awards" className="grid grid-cols-1 md:grid-cols-2 gap-8 outline-none">
+              {[
+                { title: "Best CSR Project (Women Empowerment)", org: "Indian Social Impact Awards", date: "Jan 2026", desc: "Recognized for EKI's commitment to social equity and clean energy access." },
+                { title: "Environment Protection Appreciation", org: "Rotary India National CSR Awards", date: "Dec 2025", desc: "Awarded for excellence in environmental stewardship and carbon project integrity." },
+                { title: "Excellence in Clean Energy Initiative", org: "16th India CSR Awards", date: "Nov 2025", desc: "For the 'Clean Cooking Project' impacting rural communities globally." },
+                { title: "Carbon Stewardship Award", org: "Green Climate Conclave", date: "June 2025", desc: "Recognized for driving climate action and nature-based solutions." }
+              ].map((award, i) => (
+                <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all">
+                  <div className="flex justify-between items-start mb-6">
+                    <Award className="w-8 h-8 opacity-20" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest bg-black text-white px-2 py-1">{award.date}</span>
+                  </div>
+                  <h4 className="text-xl font-serif font-bold mb-2">{award.title}</h4>
+                  <p className="text-xs uppercase tracking-widest opacity-40 mb-4">{award.org}</p>
+                  <p className="text-sm text-black/60 leading-relaxed">{award.desc}</p>
+                </div>
+              ))}
+            </TabsContent>
+
+            <TabsContent value="events" className="grid grid-cols-1 md:grid-cols-2 gap-8 outline-none">
+              {[
+                { title: "India Energy Week 2026", role: "Technical Committee Member", location: "New Delhi", date: "Feb 2026", desc: "Shaping the technical discourse for India's premier energy transition forum." },
+                { title: "World Utilities Congress", role: "Executive Committee Member", location: "Abu Dhabi", date: "Jan 2026", desc: "Strategic advisor for global utility decarbonization pathways." },
+                { title: "RMM 2025 Amsterdam", role: "Featured Panelist", location: "Amsterdam", date: "April 2025", desc: "Discussing India's Renewable Energy Market prospects with global leaders." },
+                { title: "TEDx: Path to a Greener Future", role: "Featured Speaker", location: "Indore", date: "Oct 2025", desc: "Spreading the vision of carbon-negative lifestyles to the next generation." }
+              ].map((event, i) => (
+                <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all">
+                  <div className="flex justify-between items-start mb-6">
+                    <Globe className="w-8 h-8 opacity-20" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest border border-black px-2 py-1">{event.date}</span>
+                  </div>
+                  <h4 className="text-xl font-serif font-bold mb-2">{event.title}</h4>
+                  <p className="text-xs uppercase tracking-widest opacity-40 mb-1">{event.role}</p>
+                  <p className="text-[10px] font-bold mb-4 flex items-center gap-1">📍 {event.location}</p>
+                  <p className="text-sm text-black/60 leading-relaxed">{event.desc}</p>
+                </div>
+              ))}
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
