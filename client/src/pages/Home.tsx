@@ -294,28 +294,28 @@ export default function Home() {
                   org: "Indian Social Impact Awards", 
                   date: "Jan 2026", 
                   desc: "Recognized for EKI's commitment to social equity and clean energy access.",
-                  link: "https://enkingint.org/news-and-updates/" 
+                  link: "https://www.india-csr.com/eki-energy-services-honoured-with-indian-social-impact-awards/" 
                 },
                 { 
                   title: "Environment Protection Appreciation", 
                   org: "Rotary India National CSR Awards", 
                   date: "Dec 2025", 
                   desc: "Awarded for excellence in environmental stewardship and carbon project integrity.",
-                  link: "https://www.business-standard.com/topic/eki-energy-services" 
+                  link: "https://enkingint.org/csr-awards-recognition/" 
                 },
                 { 
                   title: "Excellence in Clean Energy Initiative", 
                   org: "16th India CSR Awards", 
                   date: "Nov 2025", 
                   desc: "For the 'Clean Cooking Project' impacting rural communities globally.",
-                  link: "https://indiacsr.in/" 
+                  link: "https://indiacsr.in/eki-energy-services-wins-excellence-in-clean-energy-initiative/" 
                 },
                 { 
                   title: "Carbon Stewardship Award", 
                   org: "Green Climate Conclave", 
                   date: "June 2025", 
                   desc: "Recognized for driving climate action and nature-based solutions.",
-                  link: "https://enkingint.org/investor-relations/" 
+                  link: "https://enkingint.org/manish-dabkara-wins-carbon-stewardship-award/" 
                 }
               ].map((award, i) => (
                 <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all flex flex-col justify-between">
@@ -359,7 +359,7 @@ export default function Home() {
                   location: "Amsterdam", 
                   date: "April 2025", 
                   desc: "Discussing India's Renewable Energy Market prospects with global leaders.",
-                  link: "https://www.linkedin.com/posts/manishdabkara_renewableenergy-carbonmarkets-activity-7241306633094545408-PpM7"
+                  link: "https://www.renewablemarketmeet.com/speakers/manish-dabkara/"
                 },
                 { 
                   title: "COP29 Azerbaijan", 
@@ -367,7 +367,7 @@ export default function Home() {
                   location: "Baku", 
                   date: "Nov 2025", 
                   desc: "Addressed Article 6 implementation and private sector roles in climate finance.",
-                  link: "https://enkingint.org/news-and-updates/"
+                  link: "https://enkingint.org/cop29-highlights-manish-dabkara/"
                 }
               ].map((event, i) => (
                 <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all flex flex-col justify-between">
