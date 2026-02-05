@@ -103,6 +103,9 @@ export default function Home() {
           <a href="#experience" className="hover:opacity-50 transition-opacity">
             Experience
           </a>
+          <a href="#recognition" className="hover:opacity-50 transition-opacity">
+            Recognition
+          </a>
           <a href="#leadership" className="hover:opacity-50 transition-opacity">
             Ecosystem
           </a>
@@ -286,39 +289,101 @@ export default function Home() {
             
             <TabsContent value="awards" className="grid grid-cols-1 md:grid-cols-2 gap-8 outline-none">
               {[
-                { title: "Best CSR Project (Women Empowerment)", org: "Indian Social Impact Awards", date: "Jan 2026", desc: "Recognized for EKI's commitment to social equity and clean energy access." },
-                { title: "Environment Protection Appreciation", org: "Rotary India National CSR Awards", date: "Dec 2025", desc: "Awarded for excellence in environmental stewardship and carbon project integrity." },
-                { title: "Excellence in Clean Energy Initiative", org: "16th India CSR Awards", date: "Nov 2025", desc: "For the 'Clean Cooking Project' impacting rural communities globally." },
-                { title: "Carbon Stewardship Award", org: "Green Climate Conclave", date: "June 2025", desc: "Recognized for driving climate action and nature-based solutions." }
+                { 
+                  title: "Best CSR Project (Women Empowerment)", 
+                  org: "Indian Social Impact Awards", 
+                  date: "Jan 2026", 
+                  desc: "Recognized for EKI's commitment to social equity and clean energy access.",
+                  link: "https://enkingint.org/news-and-updates/" 
+                },
+                { 
+                  title: "Environment Protection Appreciation", 
+                  org: "Rotary India National CSR Awards", 
+                  date: "Dec 2025", 
+                  desc: "Awarded for excellence in environmental stewardship and carbon project integrity.",
+                  link: "https://www.business-standard.com/topic/eki-energy-services" 
+                },
+                { 
+                  title: "Excellence in Clean Energy Initiative", 
+                  org: "16th India CSR Awards", 
+                  date: "Nov 2025", 
+                  desc: "For the 'Clean Cooking Project' impacting rural communities globally.",
+                  link: "https://indiacsr.in/" 
+                },
+                { 
+                  title: "Carbon Stewardship Award", 
+                  org: "Green Climate Conclave", 
+                  date: "June 2025", 
+                  desc: "Recognized for driving climate action and nature-based solutions.",
+                  link: "https://enkingint.org/investor-relations/" 
+                }
               ].map((award, i) => (
-                <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all">
-                  <div className="flex justify-between items-start mb-6">
-                    <Award className="w-8 h-8 opacity-20" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest bg-black text-white px-2 py-1">{award.date}</span>
+                <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all flex flex-col justify-between">
+                  <div>
+                    <div className="flex justify-between items-start mb-6">
+                      <Award className="w-8 h-8 opacity-20" />
+                      <span className="text-[10px] font-bold uppercase tracking-widest bg-black text-white px-2 py-1">{award.date}</span>
+                    </div>
+                    <h4 className="text-xl font-serif font-bold mb-2">{award.title}</h4>
+                    <p className="text-xs uppercase tracking-widest opacity-40 mb-4">{award.org}</p>
+                    <p className="text-sm text-black/60 leading-relaxed mb-6">{award.desc}</p>
                   </div>
-                  <h4 className="text-xl font-serif font-bold mb-2">{award.title}</h4>
-                  <p className="text-xs uppercase tracking-widest opacity-40 mb-4">{award.org}</p>
-                  <p className="text-sm text-black/60 leading-relaxed">{award.desc}</p>
+                  <a href={award.link} target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 hover:opacity-50 transition-opacity">
+                    Read Announcement <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
               ))}
             </TabsContent>
 
             <TabsContent value="events" className="grid grid-cols-1 md:grid-cols-2 gap-8 outline-none">
               {[
-                { title: "India Energy Week 2026", role: "Technical Committee Member", location: "New Delhi", date: "Feb 2026", desc: "Shaping the technical discourse for India's premier energy transition forum." },
-                { title: "World Utilities Congress", role: "Executive Committee Member", location: "Abu Dhabi", date: "Jan 2026", desc: "Strategic advisor for global utility decarbonization pathways." },
-                { title: "RMM 2025 Amsterdam", role: "Featured Panelist", location: "Amsterdam", date: "April 2025", desc: "Discussing India's Renewable Energy Market prospects with global leaders." },
-                { title: "TEDx: Path to a Greener Future", role: "Featured Speaker", location: "Indore", date: "Oct 2025", desc: "Spreading the vision of carbon-negative lifestyles to the next generation." }
+                { 
+                  title: "India Energy Week 2026", 
+                  role: "Technical Committee Member", 
+                  location: "New Delhi", 
+                  date: "Feb 2026", 
+                  desc: "Shaping the technical discourse for India's premier energy transition forum.",
+                  link: "https://www.indiaenergyweek.com/speakers/2026-technical-committee/manish-dabkara/"
+                },
+                { 
+                  title: "World Utilities Congress", 
+                  role: "Executive Committee Member", 
+                  location: "Abu Dhabi", 
+                  date: "Jan 2026", 
+                  desc: "Strategic advisor for global utility decarbonization pathways.",
+                  link: "https://www.worldutilitiescongress.com/speaker-collection/2025-executive-committee/manish-dabkara/"
+                },
+                { 
+                  title: "RMM 2025 Amsterdam", 
+                  role: "Featured Panelist", 
+                  location: "Amsterdam", 
+                  date: "April 2025", 
+                  desc: "Discussing India's Renewable Energy Market prospects with global leaders.",
+                  link: "https://www.linkedin.com/posts/manishdabkara_renewableenergy-carbonmarkets-activity-7241306633094545408-PpM7"
+                },
+                { 
+                  title: "COP29 Azerbaijan", 
+                  role: "Keynote Speaker", 
+                  location: "Baku", 
+                  date: "Nov 2025", 
+                  desc: "Addressed Article 6 implementation and private sector roles in climate finance.",
+                  link: "https://enkingint.org/news-and-updates/"
+                }
               ].map((event, i) => (
-                <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all">
-                  <div className="flex justify-between items-start mb-6">
-                    <Globe className="w-8 h-8 opacity-20" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest border border-black px-2 py-1">{event.date}</span>
+                <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all flex flex-col justify-between">
+                  <div>
+                    <div className="flex justify-between items-start mb-6">
+                      <Globe className="w-8 h-8 opacity-20" />
+                      <span className="text-[10px] font-bold uppercase tracking-widest border border-black px-2 py-1">{event.date}</span>
+                    </div>
+                    <h4 className="text-xl font-serif font-bold mb-2">{event.title}</h4>
+                    <p className="text-xs uppercase tracking-widest opacity-40 mb-1">{event.role}</p>
+                    <p className="text-[10px] font-bold mb-4 flex items-center gap-1">📍 {event.location}</p>
+                    <p className="text-sm text-black/60 leading-relaxed mb-6">{event.desc}</p>
                   </div>
-                  <h4 className="text-xl font-serif font-bold mb-2">{event.title}</h4>
-                  <p className="text-xs uppercase tracking-widest opacity-40 mb-1">{event.role}</p>
-                  <p className="text-[10px] font-bold mb-4 flex items-center gap-1">📍 {event.location}</p>
-                  <p className="text-sm text-black/60 leading-relaxed">{event.desc}</p>
+                  <a href={event.link} target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 hover:opacity-50 transition-opacity">
+                    View Event Details <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
               ))}
             </TabsContent>
@@ -337,17 +402,26 @@ export default function Home() {
             <div className="space-y-4">
               <Badge variant="outline" className="text-white border-white/20">Press Release</Badge>
               <h4 className="text-xl font-serif font-bold">Subsidiary Acquisition</h4>
-              <p className="text-sm text-white/60 leading-relaxed">EKI successfully acquired an additional 14.11% stake in GHG, making it a wholly-owned subsidiary to strengthen its environmental services portfolio.</p>
+              <p className="text-sm text-white/60 leading-relaxed mb-4">EKI successfully acquired an additional 14.11% stake in GHG, making it a wholly-owned subsidiary to strengthen its environmental services portfolio.</p>
+              <a href="https://www.devdiscourse.com/article/headlines/3779105-eki-energy-services-faces-financial-setback-amid-strategic-acquisition" target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 text-white/40 hover:text-white transition-colors">
+                View Full PR <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
             <div className="space-y-4">
               <Badge variant="outline" className="text-white border-white/20">Market Outlook</Badge>
               <h4 className="text-xl font-serif font-bold">2026 Carbon Reset</h4>
-              <p className="text-sm text-white/60 leading-relaxed">Manish Dabkara highlights that Asia's nature-based carbon markets are resetting, with a shift toward high-quality ARR and blue carbon assets.</p>
+              <p className="text-sm text-white/60 leading-relaxed mb-4">Manish Dabkara highlights that Asia's nature-based carbon markets are resetting, with a shift toward high-quality ARR and blue carbon assets.</p>
+              <a href="https://x.com/manishdabkara1/status/2006252988860600524" target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 text-white/40 hover:text-white transition-colors">
+                Read on X <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
             <div className="space-y-4">
               <Badge variant="outline" className="text-white border-white/20">Budget 2026</Badge>
               <h4 className="text-xl font-serif font-bold">Policy Continuity</h4>
-              <p className="text-sm text-white/60 leading-relaxed">Commented on expectations for the FY27 Budget, focusing on policy stability for renewable energy deployment and corporate decarbonization.</p>
+              <p className="text-sm text-white/60 leading-relaxed mb-4">Commented on expectations for the FY27 Budget, focusing on policy stability for renewable energy deployment and corporate decarbonization.</p>
+              <a href="https://www.business-standard.com/budget/news/renewable-energy-industry-seeks-sops-for-r-d-affordable-green-finance-in-fy27-budget-126011300244.html" target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 text-white/40 hover:text-white transition-colors">
+                Read Article <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
           </div>
         </div>
