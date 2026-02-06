@@ -294,28 +294,28 @@ export default function Home() {
                   org: "Indian Social Impact Awards", 
                   date: "Jan 2026", 
                   desc: "Recognized for EKI's commitment to social equity and clean energy access.",
-                  link: "https://enkingint.org/news-and-updates/" 
+                  link: "https://enkingint.org/news-updates/" 
                 },
                 { 
                   title: "Environment Protection Appreciation", 
                   org: "Rotary India National CSR Awards", 
                   date: "Dec 2025", 
                   desc: "Awarded for excellence in environmental stewardship and carbon project integrity.",
-                  link: "https://enkingint.org/news-and-updates/" 
+                  link: "https://enkingint.org/news-updates/" 
                 },
                 { 
                   title: "Excellence in Clean Energy Initiative", 
                   org: "16th India CSR Awards", 
                   date: "Nov 2025", 
                   desc: "For the 'Clean Cooking Project' impacting rural communities globally.",
-                  link: "https://enkingint.org/news-and-updates/" 
+                  link: "https://enkingint.org/news-updates/" 
                 },
                 { 
                   title: "Carbon Stewardship Award", 
                   org: "Green Climate Conclave", 
                   date: "June 2025", 
                   desc: "Recognized for driving climate action and nature-based solutions.",
-                  link: "https://enkingint.org/news-and-updates/" 
+                  link: "https://enkingint.org/news-updates/" 
                 }
               ].map((award, i) => (
                 <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all flex flex-col justify-between">
@@ -328,7 +328,12 @@ export default function Home() {
                     <p className="text-xs uppercase tracking-widest opacity-40 mb-4">{award.org}</p>
                     <p className="text-sm text-black/60 leading-relaxed mb-6">{award.desc}</p>
                   </div>
-                  <a href={award.link} target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 hover:opacity-50 transition-opacity">
+                  <a 
+                    href={award.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 hover:opacity-50 transition-opacity"
+                  >
                     Read Announcement <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
@@ -359,7 +364,7 @@ export default function Home() {
                   location: "Amsterdam", 
                   date: "April 2025", 
                   desc: "Discussing India's Renewable Energy Market prospects with global leaders.",
-                  link: "https://enkingint.org/news-and-updates/"
+                  link: "https://enkingint.org/news-updates/"
                 },
                 { 
                   title: "COP29 Azerbaijan", 
@@ -367,7 +372,7 @@ export default function Home() {
                   location: "Baku", 
                   date: "Nov 2025", 
                   desc: "Addressed Article 6 implementation and private sector roles in climate finance.",
-                  link: "https://enkingint.org/news-and-updates/"
+                  link: "https://enkingint.org/news-updates/"
                 }
               ].map((event, i) => (
                 <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all flex flex-col justify-between">
@@ -381,7 +386,12 @@ export default function Home() {
                     <p className="text-[10px] font-bold mb-4 flex items-center gap-1">📍 {event.location}</p>
                     <p className="text-sm text-black/60 leading-relaxed mb-6">{event.desc}</p>
                   </div>
-                  <a href={event.link} target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 hover:opacity-50 transition-opacity">
+                  <a 
+                    href={event.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 hover:opacity-50 transition-opacity"
+                  >
                     View Event Details <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
@@ -403,7 +413,12 @@ export default function Home() {
               <Badge variant="outline" className="text-white border-white/20">Press Release</Badge>
               <h4 className="text-xl font-serif font-bold">Subsidiary Acquisition</h4>
               <p className="text-sm text-white/60 leading-relaxed mb-4">EKI successfully acquired an additional 14.11% stake in GHG, making it a wholly-owned subsidiary to strengthen its environmental services portfolio.</p>
-              <a href="https://enkingint.org/news-and-updates/" target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 text-white/40 hover:text-white transition-colors">
+              <a 
+                href="https://enkingint.org/news-updates/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 text-white/40 hover:text-white transition-colors"
+              >
                 View Full PR <ExternalLink className="w-3 h-3" />
               </a>
             </div>
@@ -411,7 +426,12 @@ export default function Home() {
               <Badge variant="outline" className="text-white border-white/20">Market Outlook</Badge>
               <h4 className="text-xl font-serif font-bold">2026 Carbon Reset</h4>
               <p className="text-sm text-white/60 leading-relaxed mb-4">Manish Dabkara highlights that Asia's nature-based carbon markets are resetting, with a shift toward high-quality ARR and blue carbon assets.</p>
-              <a href="https://enkingint.org/news-and-updates/" target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 text-white/40 hover:text-white transition-colors">
+              <a 
+                href="https://enkingint.org/news-updates/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 text-white/40 hover:text-white transition-colors"
+              >
                 Read More <ExternalLink className="w-3 h-3" />
               </a>
             </div>
@@ -419,7 +439,12 @@ export default function Home() {
               <Badge variant="outline" className="text-white border-white/20">Budget 2026</Badge>
               <h4 className="text-xl font-serif font-bold">Policy Continuity</h4>
               <p className="text-sm text-white/60 leading-relaxed mb-4">Commented on expectations for the FY27 Budget, focusing on policy stability for renewable energy deployment and corporate decarbonization.</p>
-              <a href="https://enkingint.org/news-and-updates/" target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 text-white/40 hover:text-white transition-colors">
+              <a 
+                href="https://enkingint.org/news-updates/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 text-white/40 hover:text-white transition-colors"
+              >
                 Read Article <ExternalLink className="w-3 h-3" />
               </a>
             </div>
