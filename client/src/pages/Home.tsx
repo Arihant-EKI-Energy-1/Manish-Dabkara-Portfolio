@@ -294,28 +294,28 @@ export default function Home() {
                   org: "Indian Social Impact Awards", 
                   date: "Jan 2026", 
                   desc: "Recognized for EKI's commitment to social equity and clean energy access.",
-                  link: "https://enkingint.org/news-updates/" 
+                  link: "https://indiacsr.in/" 
                 },
                 { 
                   title: "Environment Protection Appreciation", 
                   org: "Rotary India National CSR Awards", 
                   date: "Dec 2025", 
                   desc: "Awarded for excellence in environmental stewardship and carbon project integrity.",
-                  link: "https://enkingint.org/news-updates/" 
+                  link: "https://www.rotary.org/" 
                 },
                 { 
                   title: "Excellence in Clean Energy Initiative", 
                   org: "16th India CSR Awards", 
                   date: "Nov 2025", 
                   desc: "For the 'Clean Cooking Project' impacting rural communities globally.",
-                  link: "https://enkingint.org/news-updates/" 
+                  link: "https://indiacsr.in/" 
                 },
                 { 
                   title: "Carbon Stewardship Award", 
                   org: "Green Climate Conclave", 
                   date: "June 2025", 
                   desc: "Recognized for driving climate action and nature-based solutions.",
-                  link: "https://enkingint.org/news-updates/" 
+                  link: "https://enkingint.org/" 
                 }
               ].map((award, i) => (
                 <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all flex flex-col justify-between">
@@ -348,7 +348,7 @@ export default function Home() {
                   location: "New Delhi", 
                   date: "Feb 2026", 
                   desc: "Shaping the technical discourse for India's premier energy transition forum.",
-                  link: "https://www.indiaenergyweek.com/speakers/2026-technical-committee/manish-dabkara/"
+                  link: "https://www.indiaenergyweek.com/"
                 },
                 { 
                   title: "World Utilities Congress", 
@@ -356,7 +356,7 @@ export default function Home() {
                   location: "Abu Dhabi", 
                   date: "Jan 2026", 
                   desc: "Strategic advisor for global utility decarbonization pathways.",
-                  link: "https://www.worldutilitiescongress.com/speaker-collection/2025-executive-committee/manish-dabkara/"
+                  link: "https://www.worldutilitiescongress.com/"
                 },
                 { 
                   title: "RMM 2025 Amsterdam", 
@@ -364,7 +364,7 @@ export default function Home() {
                   location: "Amsterdam", 
                   date: "April 2025", 
                   desc: "Discussing India's Renewable Energy Market prospects with global leaders.",
-                  link: "https://enkingint.org/news-updates/"
+                  link: "https://www.renewablemarketmeet.com/"
                 },
                 { 
                   title: "COP29 Azerbaijan", 
@@ -372,7 +372,7 @@ export default function Home() {
                   location: "Baku", 
                   date: "Nov 2025", 
                   desc: "Addressed Article 6 implementation and private sector roles in climate finance.",
-                  link: "https://enkingint.org/news-updates/"
+                  link: "https://unfccc.int/cop29"
                 }
               ].map((event, i) => (
                 <div key={i} className="bg-white p-10 border border-black/5 hover:border-black/20 transition-all flex flex-col justify-between">
